@@ -196,8 +196,6 @@
     font-size: 44px;
     line-height: 60px;
     margin-bottom: 40px;
-    max-height: 127px;
-    overflow: hidden;
 }
 
 @media (max-width: 469px) {
