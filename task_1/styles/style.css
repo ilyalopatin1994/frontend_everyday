@@ -30,6 +30,7 @@
         padding: 0 3%;
     }
 }
+
 .container--color-blue {
     background-color: #EDF7FA;
 }
@@ -39,6 +40,7 @@
     padding-top: 48px;
     padding-bottom: 74px;
 }
+
 /*Стили навигации*/
 
 .navigation-block--right {
@@ -66,6 +68,7 @@
 .navigation-block__item:last-child {
     padding-right: 0;
 }
+
 .hamburger {
     display: block;
     width: 30px;
@@ -137,6 +140,7 @@
 .profile-info__block {
     margin-bottom: 70px;
 }
+
 .resume__row {
     display: flex;
     justify-content: space-between;
@@ -192,6 +196,8 @@
     font-size: 44px;
     line-height: 60px;
     margin-bottom: 40px;
+    max-height: 127px;
+    overflow: hidden;
 }
 
 @media (max-width: 469px) {
@@ -210,6 +216,8 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 38px;
+    max-height: 200px;
+    overflow: auto;
 }
 
 @media (max-width: 469px) {
@@ -274,6 +282,8 @@
     line-height: 38px;
     color: #21243D;
     margin-bottom: 19px;
+    max-height: 120px;
+    overflow: hidden;
 }
 
 .posts__header-row {
@@ -295,6 +305,9 @@
     font-size: 22px;
     line-height: 60px;
     color: #21243D;
+    max-width: 80%;
+    max-height: 50px;
+    overflow: hidden;
 }
 
 .posts__header-view-all {
@@ -325,7 +338,15 @@
 }
 
 .posts__column {
+    display: flex;
+    flex-basis: 50%;
     margin-right: 20px;
+}
+
+@media (max-width: 667px) {
+    .posts__column {
+        flex-basis: 100%;
+    }
 }
 
 .posts__column:last-child {
@@ -376,6 +397,8 @@
     line-height: 24px;
     color: #21243D;
     margin-bottom: 19px;
+    max-height: 100px;
+    overflow: auto;
 }
 
 .posts__delimiter {
@@ -416,6 +439,10 @@
     display: flex;
 }
 
+.works__image {
+    max-width: 246px;
+}
+
 @media (max-width: 469px) {
     .works__photo {
         padding: 0 3%;
@@ -438,16 +465,22 @@
 
 .works__info-title {
     margin-bottom: 26px;
+    max-width: 80%;
+    max-height: 50px;
+    overflow: hidden;
 }
 
 .works__info-detailed {
     display: flex;
     align-items: baseline;
+    max-width: 80%;
+    max-height: 50px;
+    overflow: hidden;
 }
 
 .works__date {
     margin-right: 26px;
-    width: 62px;
+    min-width: 62px;
     background: #142850;
     border-radius: 16px;
     text-align: center;
@@ -482,6 +515,8 @@
     font-size: 16px;
     line-height: 24px;
     color: #21243D;
+    max-height: 100px;
+    overflow: auto;
 }
 
 .works__line {

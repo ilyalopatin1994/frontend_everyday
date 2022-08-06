@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width">
   <title>Title</title>
   <link rel="stylesheet" href="styles/style.css" />
-<!--  <script src="/script/index.js"></script>-->
+  <!--  <script src="/script/index.js"></script>-->
   <script lang="javascript">
-    function showMenu() {
+    function showMenu () {
       const hamburger = document.getElementsByClassName("hamburger")[0];
       const menu = document.getElementsByClassName("hamburger__menu")[0];
       menu.classList.add('menu--active');
       hamburger.classList.add('hidden')
     }
-    function closeMenu() {
+
+    function closeMenu () {
       const hamburger = document.getElementsByClassName("hamburger")[0];
       const menu = document.getElementsByClassName("hamburger__menu")[0];
       menu.classList.remove('menu--active');
@@ -38,11 +39,11 @@
             <div class="hamburger__line"></div>
           </div>
           <div class="hamburger__menu menu">
-              <ul class="menu__list">
-                <li class="menu__item">Works</li>
-                <li class="menu__item">Blog</li>
-                <li class="menu__item">Contact</li>
-              </ul>
+            <ul class="menu__list">
+              <li class="menu__item">Works</li>
+              <li class="menu__item">Blog</li>
+              <li class="menu__item">Contact</li>
+            </ul>
             <div class="menu__close-btn" onclick="closeMenu()">
               <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g data-name="Layer 2">
@@ -68,7 +69,7 @@
               <div class="resume__item">
                 <div class="resume__title">
                   <h1>Hi, I am John, <br />
-                    Creative Technologist
+                    Creative Technologist Technologist Technologist Technologist
                   </h1>
                 </div>
                 <div class="resume__text">
