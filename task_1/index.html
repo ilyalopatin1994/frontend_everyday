@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Title</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <script src="/script/index.js"></script>
 </head>
 <body>
 <div class="mainWrapper">
@@ -17,6 +18,29 @@
             <li class="navigation-block__item">Blog</li>
             <li class="navigation-block__item">Contact</li>
           </ul>
+          <div class="hamburger" onclick="showMenu()">
+            <div class="hamburger__line"></div>
+            <div class="hamburger__line"></div>
+            <div class="hamburger__line"></div>
+          </div>
+          <div class="hamburger__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item">Works</li>
+                <li class="menu__item">Blog</li>
+                <li class="menu__item">Contact</li>
+              </ul>
+            <div class="menu__close-btn" onclick="closeMenu()">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g data-name="Layer 2">
+                  <g data-name="close">
+                    <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0" />
+                    <path
+                        d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
       </nav>
     </div>
@@ -26,7 +50,7 @@
       <div class="container">
         <div class="resume profile-info__block">
           <div class="resume__row">
-            <div class="resume__column resume__column--twice-size">
+            <div class="resume__column resume__column--size_extended">
               <div class="resume__item">
                 <div class="resume__title">
                   <h1>Hi, I am John, <br />
@@ -48,10 +72,6 @@
                   <img src="images/avatar.PNG" alt="My photo" />
                 </div>
               </div>
-            </div>
-            <div class="resume__text">
-              <h1></h1>
-
             </div>
           </div>
         </div>
@@ -118,7 +138,7 @@
             <div class="works__column work-example">
               <div class="works__item">
                 <div class="works__photo">
-                  <img src="images/work1.png" />
+                  <img class="works__image" src="images/work1.png" />
                 </div>
                 <div class="works__info">
                   <div class="works__info-title">
@@ -139,7 +159,7 @@
             <div class="works__column work-example">
               <div class="works__item">
                 <div class="works__photo">
-                  <img src="images/work2.png" />
+                  <img class="works__image" src="images/work2.png" />
                 </div>
                 <div class="works__info">
                   <div class="works__info-title">
@@ -160,7 +180,7 @@
             <div class="works__column work-example">
               <div class="works__item">
                 <div class="works__photo">
-                  <img src="images/work3.png" />
+                  <img class="works__image" src="images/work3.png" />
                 </div>
                 <div class="works__info">
                   <div class="works__info-title">
@@ -237,11 +257,11 @@
               <div class="socials__item">
                 <div class="socials__svg">
                   <a class="socials__link" href="https://www.linkedin.com">
-                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M25.6055 0H4.39453C1.97159 0 0 1.97159 0 4.39453V25.6055C0 28.0284 1.97159 30 4.39453 30H25.6055C28.0284 30 30 28.0284 30 25.6055V4.39453C30 1.97159 28.0284 0 25.6055 0ZM10.6055 23.7891H7.08984V11.4844H10.6055V23.7891ZM10.6055 9.72656H7.08984V6.21094H10.6055V9.72656ZM22.9102 23.7891H19.3945V16.7578C19.3945 15.7887 18.6058 15 17.6367 15C16.6676 15 15.8789 15.7887 15.8789 16.7578V23.7891H12.3633V11.4844H15.8789V12.147C16.7999 11.8607 17.3982 11.4844 18.5156 11.4844C20.8999 11.4869 22.9102 13.6258 22.9102 16.1536V23.7891Z"
-                        fill="#21243D" />
-                  </svg>
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M25.6055 0H4.39453C1.97159 0 0 1.97159 0 4.39453V25.6055C0 28.0284 1.97159 30 4.39453 30H25.6055C28.0284 30 30 28.0284 30 25.6055V4.39453C30 1.97159 28.0284 0 25.6055 0ZM10.6055 23.7891H7.08984V11.4844H10.6055V23.7891ZM10.6055 9.72656H7.08984V6.21094H10.6055V9.72656ZM22.9102 23.7891H19.3945V16.7578C19.3945 15.7887 18.6058 15 17.6367 15C16.6676 15 15.8789 15.7887 15.8789 16.7578V23.7891H12.3633V11.4844H15.8789V12.147C16.7999 11.8607 17.3982 11.4844 18.5156 11.4844C20.8999 11.4869 22.9102 13.6258 22.9102 16.1536V23.7891Z"
+                          fill="#21243D" />
+                    </svg>
                   </a>
                 </div>
               </div>
