@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width">
   <title>Title</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <script src="/script/index.js"></script>
+<!--  <script src="/script/index.js"></script>-->
+  <script lang="javascript">
+    function showMenu() {
+      const hamburger = document.getElementsByClassName("hamburger")[0];
+      const menu = document.getElementsByClassName("hamburger__menu")[0];
+      menu.classList.add('menu--active');
+      hamburger.classList.add('hidden')
+    }
+
+    function closeMenu() {
+      const hamburger = document.getElementsByClassName("hamburger")[0];
+      const menu = document.getElementsByClassName("hamburger__menu")[0];
+      menu.classList.remove('menu--active');
+      hamburger.classList.remove('hidden')
+    }
+  </script>
 </head>
 <body>
 <div class="mainWrapper">
