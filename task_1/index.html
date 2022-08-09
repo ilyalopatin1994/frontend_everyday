@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Title</title>
+  <title>Home</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <!--  <script src="/script/index.js"></script>-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
   <script lang="javascript">
     function showMenu () {
       const hamburger = document.getElementsByClassName("hamburger")[0];
@@ -24,14 +26,17 @@
 </head>
 <body>
 <div class="mainWrapper">
-  <header class="header">
-    <div class="container header__container">
+  <header class="header header--flex-normal">
+    <div class="header__container">
       <nav class="navigation">
         <div class="navigation-block navigation-block--right">
           <ul class="navigation-list">
-            <li class="navigation-block__item">Works</li>
-            <li class="navigation-block__item">Blog</li>
-            <li class="navigation-block__item">Contact</li>
+            <li class="navigation-block__item"><a class="navigation__link" href="#works">
+              Works
+            </a>
+            </li>
+            <li class="navigation-block__item"><a class="navigation__link" href="#blog">Blog</a></li>
+            <li class="navigation-block__item"><a class="navigation__link" href="#contacts">Contact</a></li>
           </ul>
           <div class="hamburger" onclick="showMenu()">
             <div class="hamburger__line"></div>
@@ -40,9 +45,9 @@
           </div>
           <div class="hamburger__menu menu">
             <ul class="menu__list">
-              <li class="menu__item">Works</li>
-              <li class="menu__item">Blog</li>
-              <li class="menu__item">Contact</li>
+              <li class="menu__item"><a class="menu__link" href="#works">Works</a></li>
+              <li class="menu__item"><a class="menu__link" href="#blog">Blog</a></li>
+              <li class="menu__item"><a class="menu__link" href="#contacts">Contact</a></li>
             </ul>
             <div class="menu__close-btn" onclick="closeMenu()">
               <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -68,9 +73,8 @@
             <div class="resume__column resume__column--size_extended">
               <div class="resume__item">
                 <div class="resume__title">
-                  <h1>Hi, I am John, <br />
-                    Creative Technologist
-                  </h1>
+                  Hi, I am John, <br />
+                  Creative Technologist
                 </div>
                 <div class="resume__text">
                   <p>
@@ -78,13 +82,13 @@
                     Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                   </p>
                 </div>
-                <div class="resume__download-btn">Download Resume</div>
+                <button class="resume__download-btn">Download Resume</button>
               </div>
             </div>
             <div class="resume__column">
-              <div class="resume__item resume__item_centered">
+              <div class="resume__item resume__item_right">
                 <div class="resume__image">
-                  <img src="images/avatar.PNG" alt="My photo" />
+                  <img class="myAvatar" src="images/avatar.PNG" alt="My photo" />
                 </div>
               </div>
             </div>
@@ -95,6 +99,7 @@
     <section id="recent-posts">
       <div class="container container--color-blue">
         <div class="posts">
+          <a id="blog"></a>
           <div class="posts__header">
             <div class="posts__header-row">
               <div class="posts__header-title">Recent posts</div>
@@ -105,8 +110,8 @@
           <div class="posts__row">
             <div class="posts__column">
               <div class="posts__item">
-                <div class="posts__column-header">
-                  <h1>Making a design system from scratch</h1>
+                <div class="posts__column-header post-header">
+                  <a class="title-link" href="">Making a design system from scratch</a>
                 </div>
                 <div class="posts__column-info">
                   <div class="posts__column-info-row">
@@ -118,13 +123,14 @@
                 <div class="posts__column-text">
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                   Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+
                 </div>
               </div>
             </div>
             <div class="posts__column">
               <div class="posts__item">
-                <div class="posts__column-header">
-                  <h1>Creating pixel perfect icons in Figma</h1>
+                <div class="posts__column-header post-header">
+                  <a class="title-link" href="">Creating pixel perfect icons in Figma</a>
                 </div>
                 <div class="posts__column-info">
                   <div class="posts__column-info-row">
@@ -146,6 +152,7 @@
     <section id="fetured-works">
       <div class="container">
         <div class="works">
+          <a id="works"></a>
           <div class="works__header">
             Featured works
           </div>
@@ -157,7 +164,7 @@
                 </div>
                 <div class="works__info">
                   <div class="works__info-title">
-                    <h1>Designing Dashboards</h1>
+                    <a class="title-link" href="">Designing Dashboards</a>
                   </div>
                   <div class="works__info-detailed">
                     <div class="works__date">2020</div>
@@ -178,7 +185,7 @@
                 </div>
                 <div class="works__info">
                   <div class="works__info-title">
-                    <h1>Vibrant Portraits of 2020</h1>
+                    <a class="title-link" href="">Vibrant Portraits of 2020 </a>
                   </div>
                   <div class="works__info-detailed">
                     <div class="works__date">2018</div>
@@ -199,7 +206,7 @@
                 </div>
                 <div class="works__info">
                   <div class="works__info-title">
-                    <h1>36 Days of Malayalam type</h1>
+                    <a class="title-link" href="">36 Days of Malayalam type</a>
                   </div>
                   <div class="works__info-detailed">
                     <div class="works__date">2018</div>
@@ -220,6 +227,7 @@
   </main>
   <footer class="footer">
     <div class="container">
+      <a id="contacts"></a>
       <div class="socials footer__socials">
         <nav class="socials__navigation">
           <div class="socials__row">

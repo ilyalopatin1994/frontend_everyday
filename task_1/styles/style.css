@@ -3,14 +3,21 @@
     padding: 0;
 }
 
+
 .mainWrapper {
     min-height: 100%;
     padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
+    margin: 0px auto;
 }
 
 .container {
+    max-width: 1152px;
     padding: 0px 148px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 935px) {
@@ -34,24 +41,47 @@
 .container--color-blue {
     background-color: #EDF7FA;
 }
+.header--flex-normal {
+    align-self: normal;
+    display: flex;
+    justify-content: center;
+}
 
 .header__container {
     position: relative;
-    padding-top: 48px;
-    padding-bottom: 74px;
+    flex-basis: 100%;
+    padding: 33px 58px 74px 0;
+    box-sizing: border-box;
+    max-width: 1152px;
 }
 
 /*Стили навигации*/
 
+
 .navigation-block--right {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex-wrap: nowrap;
 }
 
 .navigation-list {
     list-style-type: none;
     padding-left: 0;
+}
+
+.navigation__link {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu__link {
+    text-decoration: none;
 }
 
 @media (max-width: 469px) {
@@ -80,6 +110,12 @@
 @media (max-width: 469px) {
     .hamburger {
         opacity: 1;
+    }
+}
+
+@media (min-width: 469px) {
+    .hamburger__menu {
+        opacity: 0;
     }
 }
 
@@ -184,8 +220,8 @@
     }
 }
 
-.resume__item_centered {
-    align-items: center;
+.resume__item_right{
+    align-items: flex-end;
 }
 
 
@@ -214,8 +250,6 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 38px;
-    max-height: 200px;
-    overflow: auto;
 }
 
 @media (max-width: 469px) {
@@ -234,24 +268,24 @@
     border-radius: 50%;
     border: 1px solid #000000;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    overflow: hidden;
 }
 
 .resume__image img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
 
 }
 
 .resume__download-btn {
     width: 208px;
     height: 47px;
-    padding-top: 9px;
     box-sizing: border-box;
     background: #FF6464;
     color: #FFFFFF;
     border-radius: 2px;
+    border: 0;
     text-align: center;
     font-family: 'Heebo';
     font-style: normal;
@@ -280,8 +314,15 @@
     line-height: 38px;
     color: #21243D;
     margin-bottom: 19px;
-    max-height: 120px;
-    overflow: hidden;
+}
+
+.title-link {
+    text-decoration: none;
+    color: #21243D;
+}
+
+.title-link:hover {
+    cursor: pointer;;
 }
 
 .posts__header-row {
@@ -303,9 +344,6 @@
     font-size: 22px;
     line-height: 60px;
     color: #21243D;
-    max-width: 80%;
-    max-height: 50px;
-    overflow: hidden;
 }
 
 .posts__header-view-all {
@@ -339,6 +377,7 @@
     display: flex;
     flex-basis: 50%;
     margin-right: 20px;
+    overflow: hidden;
 }
 
 @media (max-width: 667px) {
@@ -379,13 +418,6 @@
     color: #21243D;
 }
 
-/*@media (max-width: 665px) {*/
-/*    .posts__column-info-row {*/
-/*        font-weight: 400;*/
-/*        font-size: 18px;*/
-/*        line-height: 26px;*/
-/*    }*/
-/*}*/
 
 .posts__column-text {
     font-family: 'Heebo';
@@ -395,8 +427,9 @@
     line-height: 24px;
     color: #21243D;
     margin-bottom: 19px;
-    max-height: 100px;
-    overflow: auto;
+}
+.posts__date {
+    flex-shrink: 0;
 }
 
 .posts__delimiter {
@@ -439,6 +472,11 @@
 
 .works__image {
     max-width: 246px;
+    border-radius: 6px;
+}
+
+.works__photo {
+    border-radius: 6px;
 }
 
 @media (max-width: 469px) {
@@ -463,17 +501,17 @@
 
 .works__info-title {
     margin-bottom: 26px;
-    max-width: 80%;
-    max-height: 50px;
-    overflow: hidden;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44px;
+    color: #21243D;
 }
 
 .works__info-detailed {
     display: flex;
     align-items: baseline;
-    max-width: 80%;
-    max-height: 50px;
-    overflow: hidden;
 }
 
 .works__date {
@@ -504,6 +542,7 @@
     line-height: 29px;
     color: #8695A4;
     margin-bottom: 26px;
+    overflow: hidden;
 }
 
 .works__info-text {
@@ -513,8 +552,6 @@
     font-size: 16px;
     line-height: 24px;
     color: #21243D;
-    max-height: 100px;
-    overflow: auto;
 }
 
 .works__line {
@@ -548,3 +585,19 @@
     text-align: center;
     color: #21243D;
 }
+
+
+.my_div {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.my_div img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
