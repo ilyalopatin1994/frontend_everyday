@@ -226,7 +226,7 @@
 
 @media (max-width: 667px) {
     .resume__item--special-alignment {
-        align-items: center
+        align-items: center;
     }
 }
 
