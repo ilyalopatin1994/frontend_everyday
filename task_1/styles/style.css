@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+:root {
+    --blue: #00A8CC;
+    --blacky: #21243D;
+}
 
 .mainWrapper {
     min-height: 100%;
@@ -80,6 +84,10 @@
     color: #000000;
 }
 
+.navigation__link:hover {
+    color: var(--blue)
+}
+
 .menu__link {
     text-decoration: none;
 }
@@ -131,7 +139,7 @@
     width: 100%;
     height: 3px;
     margin-bottom: 7px;
-    background-color: #21243D;
+    background-color: var(--blacky);
 }
 
 .hamburger__line:last-child {
@@ -300,6 +308,10 @@
     line-height: 29px;
 }
 
+.resume__download-btn:hover {
+    background: var(--blue)
+}
+
 @media (max-width: 469px) {
     .resume__download-btn {
         width: 208px;
@@ -318,17 +330,22 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 38px;
-    color: #21243D;
+    color: var(--blacky);
     margin-bottom: 19px;
+}
+
+.posts__link:hover {
+    color: var(--blue);
 }
 
 .title-link {
     text-decoration: none;
-    color: #21243D;
+    color: var(--blacky);
 }
 
 .title-link:hover {
-    cursor: pointer;;
+    cursor: pointer;
+    color: var(--blue);
 }
 
 .posts__header-row {
@@ -349,7 +366,7 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 60px;
-    color: #21243D;
+    color: var(--blacky);
 }
 
 .posts__header-view-all {
@@ -359,7 +376,7 @@
     font-size: 16px;
     line-height: 24px;
     text-align: right;
-    color: #00A8CC;
+    color: var(--blue)
 }
 
 @media (max-width: 469px) {
@@ -421,7 +438,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
-    color: #21243D;
+    color: var(--blacky);
 }
 
 
@@ -431,7 +448,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #21243D;
+    color: var(--blacky);
     margin-bottom: 19px;
 }
 .posts__date {
@@ -451,7 +468,7 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 60px;
-    color: #21243D;
+    color: var(--blacky);
 }
 
 @media (max-width: 667px) {
@@ -518,7 +535,7 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 44px;
-    color: #21243D;
+    color: var(--blacky);
 }
 
 
@@ -565,7 +582,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #21243D;
+    color: var(--blacky);
 }
 
 .works__line {
@@ -597,7 +614,7 @@
     font-size: 14px;
     line-height: 21px;
     text-align: center;
-    color: #21243D;
+    color: var(--blacky);
 }
 
 
@@ -613,5 +630,9 @@
     border-radius: 50%;
     height: 100px;
     width: 100px;
+}
+
+.socials__icon:hover {
+    fill: var(--blue);
 }
 
