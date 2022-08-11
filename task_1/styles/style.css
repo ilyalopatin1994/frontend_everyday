@@ -84,7 +84,7 @@
     color: #000000;
 }
 
-.navigation__link, .menu__link:hover {
+.navigation__link:hover, .menu__link:hover {
     color: var(--blue)
 }
 
