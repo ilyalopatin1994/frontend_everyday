@@ -84,12 +84,13 @@
     color: #000000;
 }
 
-.navigation__link:hover {
+.navigation__link, .menu__link:hover {
     color: var(--blue)
 }
 
-.menu__link {
-    text-decoration: none;
+
+.menu__link:hover {
+    color: var(--blue);
 }
 
 @media (max-width: 469px) {
