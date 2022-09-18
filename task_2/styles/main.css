@@ -10,6 +10,7 @@ a {
     font-size: inherit;
 }
 
+
 a:hover {
     color: #ed263a;
 }
@@ -45,6 +46,68 @@ a:hover {
 }
 
 
+.register-login-form {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 7px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px 1px #FFFFFF;
+    width: 570px;
+    height: 330px;
+    box-sizing: border-box;
+}
+
+.register-login-form__header {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+}
+
+.register-login-form__close-btn {
+    padding: 10px 8px;
+}
+
+.register-login-form__close-btn:hover {
+    cursor: pointer;
+    fill: #ED4C5C;
+}
+
+.register-login-form__lines {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.register-login-form__line {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 24px;
+}
+
+
+.register-login-form-name {
+    width: 255px;
+}
+
+.register-login-form__phone {
+    width: 100%;
+}
+
+.show-phone {
+    display: block;
+}
+
+.register-login-form__submit {
+    margin-top: 20px;
+}
+
+
 .feature-item__link a:hover {
     font-size: 14px;
 }
@@ -65,6 +128,7 @@ button:hover {
 }
 html, body {
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
