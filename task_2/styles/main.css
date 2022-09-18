@@ -159,10 +159,10 @@ html, body {
 }
 
 .header {
-
 }
 
 .header__line {
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -189,7 +189,7 @@ html, body {
     width: 445px;
 }
 
-.navbar__item {
+.navbar__item, .hamburger__menu-item {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
@@ -200,6 +200,29 @@ html, body {
 .navbar__item:hover {
     cursor: pointer;
 }
+.hamburger__menu {
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.hamburger__menu-list {
+    list-style-type: none;
+    margin: 0;
+}
+
+.hamburger__menu-item {
+    margin-bottom: 7px;
+}
+
+.hamburger__menu-item a {
+    padding: 0 3px;
+}
+
+.hamburger__menu-item a:hover {
+    box-shadow: 0 0 5px #fff;
+    background-color: #fff;
+}
+
 
 .login-button {
     border: 1px solid #FFFFFF;
