@@ -881,6 +881,10 @@ input[type=submit]:hover {
         display: inherit;
     }
 
+    .feature__columns {
+        justify-content: center;
+    }
+
 
 }
 
@@ -911,6 +915,12 @@ input[type=submit]:hover {
 
     .footer__address {
         margin-bottom: 75px;
+    }
+
+
+    .feature__columns {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -992,11 +1002,6 @@ input[type=submit]:hover {
 
     .technology__column:last-child {
         margin-bottom: 0;
-    }
-
-    .feature__columns {
-        flex-direction: column;
-        align-items: center;
     }
 }
 
