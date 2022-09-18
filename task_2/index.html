@@ -18,6 +18,7 @@
         <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              x="0px" y="0px"
              width="20px" height="20px" viewBox="0 0 41.756 41.756"
+             fill="#ED4C5C"
              style="enable-background:new 0 0 41.756 41.756;"
              xml:space="preserve" onclick="closeLoginRegisterForm()">
           <g>
@@ -28,6 +29,7 @@
           </g>
         </svg>
       </div>
+
     </div>
     <form class="register-login-form__lines">
       <div class="register-login-form__line">
@@ -37,7 +39,7 @@
       <div class="register-login-form__line show-phone">
         <input class="register-login-form__phone" type="text" name="registerPhone" placeholder="Phone number">
       </div>
-      <input class="register-login-form__submit" type="submit" value="Confirm" onclick="SubmitLoginRegisterForm()">
+      <input class="register-login-form__submit" type="submit" value="Confirm">
     </form>
   </div>
   <section id="main">
@@ -431,6 +433,12 @@
 </div>
 
 <script lang="JavaScript">
+  const buttonsToPrevent = document.querySelectorAll('input[type="Submit"]')
+
+  buttonsToPrevent.forEach((el) => {
+    el.addEventListener('click', preventDefaultWhenSubmit)
+  })
+
   const icons = document.querySelectorAll('.technology-item__image')
   icons.forEach(el => {
     el.addEventListener('mouseenter', (e) => {
@@ -449,6 +457,11 @@
       })
     })
   })
+
+  function preventDefaultWhenSubmit(event) {
+    event.preventDefault()
+    submitLoginRegisterForm()
+  }
 
   function getLoginRegisterForm() {
     const form = document.getElementsByClassName('register-login-form')[0]
@@ -486,6 +499,7 @@
     // send some data to server
     // sendDataToServer()
     // close the form
+
     closeLoginRegisterForm()
   }
   function sendDataToServer () {
