@@ -179,7 +179,7 @@ html, body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 122%;
     color: #FFFFFF;
 }
 
@@ -711,13 +711,10 @@ input[type=submit]:hover {
     color: #000000;
 }
 
-.footer__address {
-    margin-bottom: 157px;
-}
 
 .services-list {
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 75px;
 }
 
 .footer__email, .footer__telephone {
@@ -737,20 +734,32 @@ input[type=submit]:hover {
 }
 
 /*Ширина, когда блоки features начинают слишком близко прилипать друг к другу */
-@media (max-width: 1142px) {
+@media (max-width: 1366px) {
 
     .feature__columns {
         flex-wrap: wrap;
         justify-content: space-evenly;
+        align-items: flex-start;
     }
 
     .features__column {
         margin-bottom: 30px;
     }
+    .features__column:last-child {
+        margin-bottom: 0;
+    }
+
+    .contacts__form-lines {
+        width: 500px;
+    }
+
+    .form-name {
+        width: 235px;
+    }
 }
 
 /*Ширина, когда input форма начинает слишком близко подходить к тексту*/
-@media (max-width: 1075px) {
+@media (max-width: 1024px) {
     .contacts__colums {
         margin: 0 auto;
         max-width: 900px;
@@ -778,32 +787,27 @@ input[type=submit]:hover {
         justify-content: center;
     }
 
-}
-
-@media (max-width: 985px) {
-    .download__columns {
-        margin: 0 auto;
-        max-width: 850px;
-        justify-content: center;
-        flex-wrap: wrap-reverse;
+    .download__column {
+        margin-right: 50px;
+        max-width: 500px;
     }
 
-    .download__item {
-        text-align: center;
+    .download__column:last-child {
+        margin-right: 0;
     }
 
-    .download__title {
-        margin-top: 10px;
-    }
-
-    .download__text {
-        padding: 0 10px;
+    .download__image {
+        width: 400px;
     }
 
     .technology__columns {
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 600px;
+        align-items: flex-start;
+    }
+
+    .technology__column {
+        margin-right: 30px;
     }
 
     .technology__column:first-child, .technology__column:nth-child(2) {
@@ -823,10 +827,26 @@ input[type=submit]:hover {
         padding-bottom: 200px;
     }
 
+    .navbar {
+        width: 400px;
+    }
+
+    .navbar__item {
+        font-size: 12px;
+    }
+
+    .login-button {
+        padding: 7px 25px;
+    }
+
+    .logo__text {
+        font-size: 16px;
+    }
+
 }
 
-/* Здесь надо делать меню бургер*/
-@media (max-width: 850px) {
+/* Здесь начинает отображаться меню бургер*/
+@media (max-width: 768px) {
     .main__title {
         font-weight: 700;
         font-size: 60px;
@@ -859,9 +879,29 @@ input[type=submit]:hover {
         margin-bottom: 25px;
     }
 
+    .download__column {
+        margin-right: 0;
+    }
+
+    .download__title {
+        text-align: center;
+    }
+
     .description__columns {
         flex-wrap: wrap-reverse;
         justify-content: center;
+    }
+
+    .description__column {
+        margin-right: 0px;
+    }
+
+    .description__item, .download__item {
+        align-items: center;
+    }
+
+    .description__image, .download__image {
+        width: 345px;
     }
 
     .description__title, description__text {
@@ -885,36 +925,37 @@ input[type=submit]:hover {
         justify-content: center;
     }
 
+    .footer__columns {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 
-}
+    .footer__column {
+        width: 200px;
+        margin-bottom: 30px;
+    }
 
-@media (max-width: 750px) {
+    .services-list {
+        margin-bottom: 0px;
+    }
+
     .footer__column-title {
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 14px;
-        color: #101010;
+        font-size: 18px;
         margin-bottom: 20px;
     }
 
     .footer__column-content, .copyright {
-        font-weight: 400;
-        font-size: 8px;
-        line-height: 160%;
+        font-size: 14px;
         text-transform: capitalize;
-        color: #000000;
+    }
+
+    .footer-services__item {
+        margin-bottom: 10px;
     }
 
     .features__title {
         margin-bottom: 63px;
-    }
-
-    .features__container {
-        max-width: 650px;
-    }
-
-    .footer__address {
-        margin-bottom: 75px;
     }
 
 
@@ -922,11 +963,26 @@ input[type=submit]:hover {
         flex-direction: column;
         align-items: center;
     }
-}
 
-@media (max-width: 600px) {
+    .download__columns {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .download__column {
+        margin-bottom: 30px;
+    }
+
     .technology__header {
         margin-bottom: 40px;
+    }
+
+    .technology__column {
+        margin-bottom: 110px;
+    }
+
+    .technology__container {
+        padding-bottom: 100px;
     }
 
     .form-name {
@@ -937,76 +993,10 @@ input[type=submit]:hover {
         max-width: 350px;
     }
 
-    .footer__column-content svg {
-        max-width: 130px;
-    }
-}
-
-@media (max-width: 500px) {
-    .technology__header {
-        margin-bottom: 40px;
-    }
-
-    .description__image, .download__image {
-        width: 350px;
-    }
-
-    .description__item, .download__item {
-        align-items: center;
-    }
-
-    .footer__columns {
-        flex-wrap: wrap;
-        width: 400px;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-
-    .footer__column {
-        width: 180px;
-    }
-
-
-    .footer__address {
-        margin-bottom: 0;
-    }
-
-    .footer__column-content {
-        margin-bottom: 45px;
-        font-size: 10px
-    }
-
-    .footer__column-title {
-        margin-bottom: 10px;
-    }
-
-    .footer-services__item {
-        margin-bottom: 10px;
-    }
-
-    .footer__email, .footer__telephone {
-        margin-bottom: 10px;
-    }
-
-    .common-container {
-        padding-top: 50px;
-    }
-
-    .technology__container {
-        padding-bottom: 150px;
-    }
-
-    .technology__column {
-        margin-bottom: 110px;
-    }
-
-    .technology__column:last-child {
-        margin-bottom: 0;
-    }
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
     .form-name {
         max-width: 140px;
     }
@@ -1021,29 +1011,6 @@ input[type=submit]:hover {
 
     .description__item, .download__item {
         align-items: center;
-    }
-
-    .footer__columns {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer__column-content, .copyright {
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 160%;
-        text-transform: capitalize;
-        color: #000000;
-    }
-
-    .footer__column-title {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-
-    .footer-services__item {
-        margin-bottom: 10px;
     }
 
     .footer__column-content svg {
