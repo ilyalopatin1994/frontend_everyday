@@ -129,9 +129,11 @@ input[type="text"] {
 button:hover {
     cursor: pointer;
 }
+
 html, body {
     height: 100vh;
     scroll-behavior: smooth;
+    font-family: 'Lato';
 }
 
 .wrapper {
@@ -175,8 +177,6 @@ html, body {
 
 .logo__text {
     text-transform: uppercase;
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
@@ -191,8 +191,6 @@ html, body {
 
 .navbar__item {
     text-transform: uppercase;
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
@@ -231,8 +229,6 @@ html, body {
 }
 
 .main__title {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 700;
     font-size: 72px;
     line-height: 86px;
@@ -243,8 +239,6 @@ html, body {
 }
 
 .main__description {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 150%;
@@ -255,8 +249,6 @@ html, body {
 
 .main__sign-up-btn {
     background-color: #fff;
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -303,8 +295,6 @@ html, body {
 }
 
 .description__title {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
@@ -312,9 +302,6 @@ html, body {
 }
 
 .description__text {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     text-align: justify;
@@ -322,9 +309,6 @@ html, body {
 }
 
 .description__link {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     text-align: justify;
@@ -367,8 +351,6 @@ html, body {
 }
 
 .features__title {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
@@ -399,8 +381,6 @@ html, body {
     left: 50%;
     top: -50%;
     transform: translate(-50%, 42%);
-    width: 293px;
-    height: 198px;
     background: #FFFFFF;
     border-radius: 5px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -408,11 +388,14 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 30px 32px 25px 32px;
+    width: 293px;
+    height: 198px;
+    box-sizing: border-box;
 }
 
 
 .feature-item__title {
-    font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -423,9 +406,6 @@ html, body {
 }
 
 .feature-item__text {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 150%;
     text-align: center;
@@ -434,8 +414,6 @@ html, body {
 }
 
 .feature-item__link {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 150%;
@@ -448,14 +426,13 @@ html, body {
 }
 
 .technology__header {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
     text-align: center;
     margin-bottom: 95px;
 }
+
 .technology__columns {
     display: flex;
     justify-content: space-between;
@@ -474,8 +451,6 @@ html, body {
 }
 
 .technology-item__number {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 700;
     font-size: 100px;
     line-height: 120px;
@@ -508,8 +483,6 @@ html, body {
 }
 
 .technology-item__title {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
@@ -518,9 +491,6 @@ html, body {
 }
 
 .technology-item__description {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     text-align: center;
@@ -578,6 +548,8 @@ html, body {
     padding: 2px;
     width: 32px;
     height: 32px;
+    display: flex;
+    align-items: center;
 }
 
 .download__icon-path:hover {
@@ -586,8 +558,6 @@ html, body {
 
 
 .download__title {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
@@ -596,9 +566,6 @@ html, body {
 }
 
 .download__text {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     text-align: justify;
@@ -622,8 +589,6 @@ html, body {
 }
 
 .contacts__title {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
@@ -632,9 +597,6 @@ html, body {
 }
 
 .contacts__description {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 140%;
     text-align: justify;
@@ -671,9 +633,6 @@ input[type=text] {
     border-radius: 6px;
     border-color: #333333;
     padding-left: 31px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     box-sizing: border-box;
@@ -682,9 +641,6 @@ input[type=text] {
 }
 
 input[type=submit] {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
@@ -704,6 +660,7 @@ input[type=submit]:hover {
 .footer {
     background-color: #FAFAFA;
 }
+
 .footer__columns {
     display: flex;
     justify-content: space-between;
@@ -715,8 +672,6 @@ input[type=submit]:hover {
 }
 
 .footer__column-title {
-    font-family: 'Lato';
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
@@ -727,9 +682,6 @@ input[type=submit]:hover {
 .footer__column-content, .copyright {
     display: flex;
     flex-direction: column;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 160%;
     text-transform: capitalize;
@@ -757,8 +709,7 @@ input[type=submit]:hover {
 
 .facebook:hover path,
 .linkedin:hover path,
-.twitter:hover path
-{
+.twitter:hover path {
     fill: #ed263a;
 }
 
@@ -783,24 +734,29 @@ input[type=submit]:hover {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .contacts__column {
         justify-content: center;
         margin-bottom: 30px;
     }
+
     .contacts__text-part {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .contacts__title {
         margin-bottom: 20px;
     }
+
     .contacts__form-line--centered {
         display: flex;
         justify-content: center;
     }
 
 }
+
 @media (max-width: 985px) {
     .download__columns {
         margin: 0 auto;
@@ -808,12 +764,15 @@ input[type=submit]:hover {
         justify-content: center;
         flex-wrap: wrap-reverse;
     }
+
     .download__item {
         text-align: center;
     }
+
     .download__title {
         margin-top: 10px;
     }
+
     .download__text {
         padding: 0 10px;
     }
@@ -842,6 +801,7 @@ input[type=submit]:hover {
     }
 
 }
+
 /* Здесь надо делать меню бургер*/
 @media (max-width: 850px) {
     .main__title {
@@ -935,6 +895,7 @@ input[type=submit]:hover {
     .technology__header {
         margin-bottom: 40px;
     }
+
     .form-name {
         max-width: 165px;
     }
@@ -942,6 +903,7 @@ input[type=submit]:hover {
     .contacts__form-lines {
         max-width: 350px;
     }
+
     .footer__column-content svg {
         max-width: 130px;
     }
@@ -996,6 +958,7 @@ input[type=submit]:hover {
     .common-container {
         padding-top: 50px;
     }
+
     .technology__container {
         padding-bottom: 150px;
     }
@@ -1093,32 +1056,4 @@ input[type=submit]:hover {
         font-size: 10px;
         line-height: 150%;
     }
-
 }
-
-/*@media (max-width: 680px) {*/
-/*    .container {*/
-/*        width: 500px;*/
-/*    }*/
-/*    .section-columns {*/
-/*        width: 400px;*/
-/*    }*/
-/*    .main__title {*/
-/*        font-weight: 600;*/
-/*        font-size: 32px;*/
-/*        line-height: 46px;*/
-/*        margin-bottom: 25px;*/
-/*    }*/
-/*    .main__description {*/
-/*        font-weight: 500;*/
-/*        font-size: 18px;*/
-/*        line-height: 150%;*/
-/*        margin-bottom: 25px;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 560px) {*/
-/*    .menu--active {*/
-/*    !*    При меньшей ширине будет меню гамбургер*!*/
-/*    }*/
-/*}*/
