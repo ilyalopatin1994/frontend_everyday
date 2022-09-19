@@ -20,7 +20,7 @@ a:hover {
 }
 
 .hamburger {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -35,14 +35,9 @@ a:hover {
     width: 80%;
 }
 
-/*Отображаем на устройствах больше мобильных (850px)*/
+/*Отображаем на устройствах больше мобильных (768px)*/
 .show-when-not-mobile {
     display: inherit;
-}
-
-/*По умолчанию не отображаем, но если экран станет равным мобильному (850px), то отображаем*/
-.show-when-mobile {
-    display: none;
 }
 
 
@@ -204,6 +199,12 @@ html, body {
     position: absolute;
     right: 0;
     display: none;
+    align-items: flex-start;
+}
+
+.hamburger__menu-close-btn svg:hover {
+    filter: drop-shadow(0px 0px 2px #fff);
+
 }
 .hamburger__menu-list {
     list-style-type: none;
@@ -221,6 +222,7 @@ html, body {
 .hamburger__menu-item a:hover {
     box-shadow: 0 0 5px #fff;
     background-color: #fff;
+    border-radius: 2px;
 }
 
 
@@ -845,8 +847,20 @@ input[type=submit]:hover {
 
 }
 
+@media (min-width: 769px) {
+    .hamburger {
+        display: none !important;
+    }
+
+    .hamburger__menu {
+        display: none !important;
+    }
+}
 /* Здесь начинает отображаться меню бургер*/
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
     .main__title {
         font-weight: 700;
         font-size: 60px;
@@ -918,7 +932,7 @@ input[type=submit]:hover {
     }
 
     .show-when-mobile {
-        display: inherit;
+        display: flex;
     }
 
     .feature__columns {
